@@ -280,7 +280,10 @@ const today = () => new Date().toISOString().split("T")[0];
 const now = () => new Date().toLocaleString("es-PA");
 
 function genInvoiceNum() {
-  return "FAC-" + String(Math.floor(Math.random() * 90000) + 10000);
+  const last = parseInt(localStorage.getItem("mrg_last_invoice") || "0");
+  const next = last + 1;
+  localStorage.setItem("mrg_last_invoice", String(next));
+  return "MRG-" + String(next).padStart(3, "0");
 }
 
 // ─── PDF GENERATOR (browser) ─────────────────────────────────────────────────
