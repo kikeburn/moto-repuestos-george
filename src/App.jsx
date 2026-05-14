@@ -303,7 +303,7 @@ function generateInvoicePDF(venta) {
       <div class="row">
         <div>
           <h2>🏍 MOTO REPUESTOS GEORGE</h2>
-          <div class="sub">RUC: 1-32-422<br>Panamá<br>Tel: +507 6000-0000</div>
+          <div class="sub">RUC: 1-32-422 D.V. 86<br>Panamá<br>Tel: +507 6000-0000</div>
         </div>
         <div style="text-align:right">
           <strong style="font-size:16px">${venta.numero}</strong><br>
@@ -337,7 +337,7 @@ function generateInvoicePDF(venta) {
 function sendWhatsApp(venta, phone) {
   const msg = encodeURIComponent(
     `🏍 *MOTO REPUESTOS GEORGE*\n` +
-    `RUC: 1-32-422\n\n` +
+    `RUC: 1-32-422 D.V. 86\n\n` +
     `*Factura:* ${venta.numero}\n*Cliente:* ${venta.cliente}\n*Fecha:* ${venta.fecha}\n\n` +
     venta.items.map(i => `• ${i.nombre} x${i.cantidad} = ${formatMoney(i.subtotal)}`).join("\n") +
     `\n\n*Subtotal:* ${formatMoney(venta.subtotal)}\n*ITBMS 7%:* ${formatMoney(venta.itbms)}\n*TOTAL:* ${formatMoney(venta.total)}\n\n¡Gracias por su compra! 🙏`
@@ -809,7 +809,7 @@ function Ventas({ data, setData }) {
                 <div className="invoice-header">
                   <div className="invoice-company">
                     <h2>🏍 MOTO REPUESTOS GEORGE</h2>
-                    <p>RUC: 1-32-422<br />Panamá<br />Tel: +507 6000-0000</p>
+                    <p>RUC: 1-32-422 D.V. 86<br />Panamá<br />Tel: +507 6000-0000</p>
                   </div>
                   <div className="invoice-meta">
                     <h3>{invoiceModal.numero}</h3>
@@ -1009,7 +1009,7 @@ function Reportes({ data }) {
       .footer{text-align:center;font-size:11px;color:#888;margin-top:24px}
     </style></head><body>
       <h2>🏍 MOTO REPUESTOS GEORGE — REPORTE</h2>
-      <p>RUC: 1-32-422 | Período: ${period.toUpperCase()} | Generado: ${now()}</p>
+      <p>RUC: 1-32-422 D.V. 86 | Período: ${period.toUpperCase()} | Generado: ${now()}</p>
       <hr>
       <h3>📊 Resumen</h3>
       <table><tr><th>Concepto</th><th>Valor</th></tr>
@@ -1236,7 +1236,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="ruc">RUC: 1-32-422</div>
+          <div className="ruc">RUC: 1-32-422 D.V. 86</div>
           <nav className="nav">
             {nav.map(item => (
               <div key={item.id} className={`nav-item ${module === item.id ? "active" : ""}`} onClick={() => setModule(item.id)}>
