@@ -306,7 +306,7 @@ function generateInvoicePDF(venta) {
       <div class="row">
         <div>
           <h2>🏍 MOTO REPUESTOS GEORGE</h2>
-          <div class="sub">RUC: 1-32-422 D.V. 86<br>Panamá<br>Tel: +507 6000-0000</div>
+          <div class="sub">RUC: 1-32-422 D.V. 86<br>David, Chiriquí<br>Tel: +507 6478-5258</div>
         </div>
         <div style="text-align:right">
           <strong style="font-size:16px">${venta.numero}</strong><br>
@@ -812,7 +812,7 @@ function Ventas({ data, setData }) {
                 <div className="invoice-header">
                   <div className="invoice-company">
                     <h2>🏍 MOTO REPUESTOS GEORGE</h2>
-                    <p>RUC: 1-32-422 D.V. 86<br />Panamá<br />Tel: +507 6000-0000</p>
+                    <p>RUC: 1-32-422 D.V. 86<br />David - Chiriquí<br />Tel: +507 64785258</p>
                   </div>
                   <div className="invoice-meta">
                     <h3>{invoiceModal.numero}</h3>
@@ -845,7 +845,7 @@ function Ventas({ data, setData }) {
               <div className="mt-4">
                 <label className="form-label">📱 Número WhatsApp (para enviar)</label>
                 <div className="flex gap-2">
-                  <input className="form-control" placeholder="+507 6000-0000" value={wpPhone} onChange={e => setWpPhone(e.target.value)} />
+                  <input className="form-control" placeholder="+507 6478-5258" value={wpPhone} onChange={e => setWpPhone(e.target.value)} />
                   <button className="btn btn-success" onClick={() => sendWhatsApp(invoiceModal, wpPhone)} disabled={!wpPhone}>
                     📲 WhatsApp
                   </button>
